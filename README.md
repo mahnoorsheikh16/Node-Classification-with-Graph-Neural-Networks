@@ -14,10 +14,10 @@ In modern data mining tasks, graphs are a powerful representation of relationshi
 There are 2480 nodes in total and each node belongs to one of 7 classes. Each node in the graph is associated with a feature vector and a label (class). The connection between nodes is stored in an adjacent matrix.
 
 The provided files include:
-1. An adjacency matrix stored in file adj.npz: Each entry in this matrix indicates whether two nodes are connected or not. E.g., adj[i, j] = 0 if node i and node j are disconnected, adj[i, j] > 0 otherwise.
+1. An adjacency matrix stored in file `adj.npz`: Each entry in this matrix indicates whether two nodes are connected or not. E.g., adj[i, j] = 0 if node i and node j are disconnected, adj[i, j] > 0 otherwise.
    
-2. A feature matrix stored in file features.npy: Each row represents the feature vector of a node. E.g., features[i] represents the feature vector of node i.
+2. A feature matrix stored in file `features.npy`: Each row represents the feature vector of a node. E.g., features[i] represents the feature vector of node i.
    
-3. A list of labels stored in file labels.npy: Includes class labels of training labels.
+3. A list of labels stored in file `labels.npy`: Includes class labels of training labels.
    
-4. Data splits (train/test splits) stored in splits.json: splits[‘idx_train’]: node index for training nodes. splits[‘idx_test’]: node index for testing nodes.
+4. Data splits (train/test splits) stored in `splits.json`: splits[‘idx_train’]: node index for training nodes. splits[‘idx_test’]: node index for testing nodes.
