@@ -15,13 +15,23 @@ There are 2480 nodes in total and each node belongs to one of 7 classes. Each no
 
 The provided files include:
 1. An adjacency matrix: stored in file adj.npz
+   
    Each entry in this matrix indicates whether two nodes are connected or not
+
    E.g., adj[i, j] = 0 if node i and node j are disconnected, adj[i, j] > 0 otherwise
-2. A feature matrix: stored in file features.npy
+   
+3. A feature matrix: stored in file features.npy
+   
    Each row represents the feature vector of a node
+   
    E.g., features[i] represents the feature vector of node i
-3. A list of labels: stored in file labels.npy
+   
+5. A list of labels: stored in file labels.npy
+   
    Include class labels of training labels
-4. Data splits (train/test splits): stored in splits.json
+   
+7. Data splits (train/test splits): stored in splits.json
+   
    splits[‘idx_train’]: node index for training nodes
+   
    splits[‘idx_test’]: node index for testing nodes
