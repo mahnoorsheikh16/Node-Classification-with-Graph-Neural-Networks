@@ -11,7 +11,7 @@ This classification problem aims to predict the class label for each node based 
 In modern data mining tasks, graphs are a powerful representation of relationships. For example, in a social network (e.g., Facebook, LinkedIn), the interaction of users can form a graph, where each node represents one user and edges represent social interactions, such as friendships, follows, or interactions on social media platforms. Node classification is a key task that predicts labels or categories for nodes within a graph. Thus, this project will focus on the task of node classification in a single graph. 
 
 ## Dataset:
-There are 2480 nodes in total and each node belongs to one of 7 classes. Each node in the graph is associated with a feature vector and a label (class). The connection between nodes is stored in an adjacent matrix.
+There are 2480 nodes in total and each node belongs to one of 7 classes. Each node in the graph is associated with a feature vector and a label (class). The connection between nodes is stored in an adjacent matrix. The dataset contains 10100 edges, 1390 features, and 496/1984 train/test nodes.
 
 The provided files include:
 1. An adjacency matrix stored in `adj.npz`: Each entry in this matrix indicates whether two nodes are connected or not. E.g., adj[i, j] = 0 if node i and node j are disconnected, adj[i, j] > 0 otherwise.
