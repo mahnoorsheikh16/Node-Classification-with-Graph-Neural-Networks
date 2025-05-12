@@ -50,14 +50,14 @@ This project used the PyTorch geometric framework due to its efficiency in handl
 
 • To improve on GCN’s equal weighting of all neighbours, GAT was implemented. GAT uses attention mechanisms, which allows the model to assign different importance to different neighbors, based on their features. The attention mechanism is trained to focus on the most relevant neighbours for classification. The GAT model implements multi-head attention to stabilize the learning process.
 
-• Analysis: GAT provided flexibility by allowing the model to focus on important neighbours. Also, the multi-head attention mechanism can stabilize the learning process and achieve a diversified aggregation of neighbour nodes. It is especially suitable for nodes with heterogeneous neighbourhoods.
+• GAT provided flexibility by allowing the model to focus on important neighbours. Also, the multi-head attention mechanism can stabilize the learning process and achieve a diversified aggregation of neighbour nodes. It is especially suitable for nodes with heterogeneous neighbourhoods.
 
 **GraphSAGE (Graph Sample and Aggregation)**
 
 • For better scalability of the nodes, GraphSAGE was used. GraphSAGE uses a sampling-based approach; instead of using all the neighbours, GraphSAGE samples a fixed number
 of neighbours and combines their features.
 
-• Analysis: Sampling neighbours reduced memory and computational cost. The mean aggregator offered a simple yet powerful summarization, and GraphSAGE proved valuable in handling the sparse adjacency structure without losing crucial information.
+• Sampling neighbours reduced memory and computational cost. The mean aggregator offered a simple yet powerful summarization, and GraphSAGE proved valuable in handling the sparse adjacency structure without losing crucial information.
 
 **Message Passing Neural Network(MPNN)**
 
@@ -71,7 +71,7 @@ of neighbours and combines their features.
 
 – A readout function that generates final node representations.
 
-• Analysis: MPNN supports flexible updating and propagation of experimental node features. Although the computation is large, it improves robustness when node relationships
+• MPNN supports flexible updating and propagation of experimental node features. Although the computation is large, it improves robustness when node relationships
 are complex.
 
 **Deep Graph Infomax(DGI) and DeepInfoMaxModel**
