@@ -93,17 +93,17 @@ are complex.
 
 – Multi-head attention with 8 heads in the first layer.
 
-– There is a hidden dimension of 32 per attention head(256 total).
+– There is a hidden dimension of 32 per attention head (256 total).
 
 – The second GAT layer has 256 units.
 
-– ELU activation occurs between layers.
+– ReLU activation occurs between layers.
 
 – Dropout 0.6 for regularization.
 
 **GraphSAGE**
 
-– The number of neighbours involved is determined according to SAGEConv from PyTorch Geometric. By default, we use all available neighbors.
+– The number of neighbours involved is determined according to SAGEConv from PyTorch Geometric. By default, we use all available neighbours.
 
 – Uses the mean aggregator function (default).
 
@@ -121,7 +121,7 @@ are complex.
 
 – The hidden dimensions match the other models.
 
-– Used mean aggregation to summarize neighbourhood information.
+– Mean aggregation to summarize neighbourhood information.
 
 – Dropout 0.5 for regularization.
 
