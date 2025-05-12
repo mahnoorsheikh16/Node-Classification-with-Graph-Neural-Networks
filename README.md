@@ -44,7 +44,7 @@ This project used the PyTorch geometric framework due to its efficiency in handl
 
 • This was implemented as the baseline approach, based on previous proven effectiveness on node classification tasks. Our GCN model collects features from each node’s neighbourhood through a series of graph convolutions. For a given node, the model combines the node’s features with the features of its neighbour, which allows for information to spread within the graph structure.
 
-• Analysis: GCN captures structural relationships without overfitting to noise. The added dropout helped balance model capacity and generalization.
+• GCN captures structural relationships without overfitting to noise. The added dropout helped balance model capacity and generalization.
 
 **Graph Attention Network(GAT)**
 
