@@ -40,26 +40,26 @@ This project used the PyTorch geometric framework due to its efficiency in handl
 • After cleaning the data, the data was converted to PyTorch tensors and PyTorch Geometric Data objects.
 
 ## Modeling Rationale
-**Graph Convolutional Network**
+**Graph Convolutional Network (GCN)**
 
 • This was implemented as the baseline approach, based on previous proven effectiveness on node classification tasks. Our GCN model collects features from each node’s neighbourhood through a series of graph convolutions. For a given node, the model combines the node’s features with the features of its neighbour, which allows for information to spread within the graph structure.
 
 • GCN captures structural relationships without overfitting to noise. The added dropout helped balance model capacity and generalization.
 
-**Graph Attention Network(GAT)**
+**Graph Attention Network (GAT)**
 
 • To improve on GCN’s equal weighting of all neighbours, GAT was implemented. GAT uses attention mechanisms, which allows the model to assign different importance to different neighbors, based on their features. The attention mechanism is trained to focus on the most relevant neighbours for classification. The GAT model implements multi-head attention to stabilize the learning process.
 
 • GAT provided flexibility by allowing the model to focus on important neighbours. Also, the multi-head attention mechanism can stabilize the learning process and achieve a diversified aggregation of neighbour nodes. It is especially suitable for nodes with heterogeneous neighbourhoods.
 
-**GraphSAGE (Graph Sample and Aggregation)**
+**Graph Sample and Aggregation (GraphSAGE)**
 
 • For better scalability of the nodes, GraphSAGE was used. GraphSAGE uses a sampling-based approach; instead of using all the neighbours, GraphSAGE samples a fixed number
 of neighbours and combines their features.
 
 • Sampling neighbours reduced memory and computational cost. The mean aggregator offered a simple yet powerful summarization, and GraphSAGE proved valuable in handling the sparse adjacency structure without losing crucial information.
 
-**Message Passing Neural Network(MPNN)**
+**Message Passing Neural Network (MPNN)**
 
 • MPNN allows for custom message-passing operations between nodes. We used two message-passing iterations to capture deeper dependencies.
 
@@ -74,7 +74,7 @@ of neighbours and combines their features.
 • MPNN supports flexible updating and propagation of experimental node features. Although the computation is large, it improves robustness when node relationships
 are complex.
 
-**Deep Graph Infomax(DGI) and DeepInfoMaxModel**
+**Deep Graph Infomax (DGI) and DeepInfoMaxModel**
 
 • An infomax model learns node representations by maximizing similar information between local and global graph structures. This was used to leverage the unlabeled portions of the graph. We use GCN as the encoder and add an additional classifier. The approach initialized node implementation before tuning with unsupervised learning on the labelled training data. Finally, our model is able to understand the graph structure more comprehensively.
 
