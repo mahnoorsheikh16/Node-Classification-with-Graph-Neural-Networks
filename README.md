@@ -102,6 +102,7 @@ are complex.
 – Dropout 0.6 for regularization.
 
 **GraphSAGE**
+
 – The number of neighbours involved is determined according to SAGEConv from PyTorch Geometric. By default, we use all available neighbors.
 
 – Uses the mean aggregator function (default).
